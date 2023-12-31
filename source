@@ -1,5 +1,4 @@
 local precoss = game.CoreGui:FindFirstChild("MobileVers")
-
 if precoss then
 	precoss:Destroy()
 end
@@ -116,7 +115,7 @@ Converted["_TextLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextLabel1"].BorderSizePixel = 0
 Converted["_TextLabel1"].Position = UDim2.new(0.0491530336, 0, 0, 0)
 Converted["_TextLabel1"].Selectable = false
-Converted["_TextLabel1"].Size = UDim2.new(0, 110, 0, 25)
+Converted["_TextLabel1"].Size = UDim2.new(0.901137769, 0, 1, 0)
 Converted["_TextLabel1"].Name = "TextLabel"
 Converted["_TextLabel1"].Parent = Converted["_Pages"]
 
@@ -140,7 +139,7 @@ Converted["_TextLabel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextLabel2"].BorderSizePixel = 0
 Converted["_TextLabel2"].Position = UDim2.new(0.0491530336, 0, 0, 0)
 Converted["_TextLabel2"].Selectable = false
-Converted["_TextLabel2"].Size = UDim2.new(0, 110, 0, 25)
+Converted["_TextLabel2"].Size = UDim2.new(0.901137769, 0, 1, 0)
 Converted["_TextLabel2"].Name = "TextLabel"
 Converted["_TextLabel2"].Parent = Converted["_Slender"]
 
@@ -164,7 +163,7 @@ Converted["_TextLabel3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextLabel3"].BorderSizePixel = 0
 Converted["_TextLabel3"].Position = UDim2.new(0.0491530336, 0, 0, 0)
 Converted["_TextLabel3"].Selectable = false
-Converted["_TextLabel3"].Size = UDim2.new(0, 110, 0, 25)
+Converted["_TextLabel3"].Size = UDim2.new(0.901137769, 0, 1, 0)
 Converted["_TextLabel3"].Name = "TextLabel"
 Converted["_TextLabel3"].Parent = Converted["_GensQuickOpen"]
 
@@ -188,7 +187,7 @@ Converted["_TextLabel4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextLabel4"].BorderSizePixel = 0
 Converted["_TextLabel4"].Position = UDim2.new(0.0491530336, 0, 0, 0)
 Converted["_TextLabel4"].Selectable = false
-Converted["_TextLabel4"].Size = UDim2.new(0, 110, 0, 25)
+Converted["_TextLabel4"].Size = UDim2.new(0.901137769, 0, 1, 0)
 Converted["_TextLabel4"].Name = "TextLabel"
 Converted["_TextLabel4"].Parent = Converted["_Generators"]
 
@@ -304,11 +303,11 @@ Converted["_UIStroke"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 Converted["_UIStroke"].LineJoinMode = Enum.LineJoinMode.Bevel
 Converted["_UIStroke"].Parent = Converted["_TextButton"]
 
-Converted["_MobileVers"].Parent = game.CoreGui
+Converted["_MobileVers"].Parent = game.Workspace
 
 local fake_module_scripts = {}
 
-local function VJFKEC_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Pages.TextLabel.LocalScript
+local function YEMJM_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Pages.TextLabel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextLabel1"]
@@ -332,7 +331,7 @@ local function VJFKEC_fake_script() -- Fake Script: Workspace.MobileVers.Frame.P
 	
 			local text = Instance.new("TextLabel")
 			text.Parent = BGui
-			text.Text = "Page"
+			text.Text = "Page (" ..math.floor((workspace.CurrentCamera.CFrame - parent.CFrame).magnitude).. "m away)"
 			text.TextScaled = true
 			text.BackgroundTransparency = 1
 			text.Size = UDim2.new(1, 0, 1, 0)
@@ -372,7 +371,7 @@ local function VJFKEC_fake_script() -- Fake Script: Workspace.MobileVers.Frame.P
 		end
 	end)
 end
-local function HXWWA_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Slender.TextLabel.LocalScript
+local function QZWJ_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Slender.TextLabel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextLabel2"]
@@ -410,7 +409,7 @@ local function HXWWA_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Sl
 		end
 	end)
 end
-local function MXNOZW_fake_script() -- Fake Script: Workspace.MobileVers.Frame.GensQuickOpen.TextLabel.LocalScript
+local function VXZVSRQ_fake_script() -- Fake Script: Workspace.MobileVers.Frame.GensQuickOpen.TextLabel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextLabel3"]
@@ -432,7 +431,7 @@ local function MXNOZW_fake_script() -- Fake Script: Workspace.MobileVers.Frame.G
 		end
 	end)
 end
-local function CZDOO_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Generators.TextLabel.LocalScript
+local function XVHP_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Generators.TextLabel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextLabel4"]
@@ -459,7 +458,7 @@ local function CZDOO_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Ge
 		text.BackgroundTransparency = 1
 		text.Size = UDim2.new(1, 0, 1, 0)
 		text.TextColor3 = Color3.fromRGB(0, 0, 255)
-		text.Text = "Generator"
+		text.Text = "Generator (" ..math.floor((workspace.CurrentCamera.CFrame - parent.PrimaryPart.CFrame).magnitude).. "m away)"
 	
 		if parent:FindFirstChild("On") then
 	
@@ -486,7 +485,7 @@ local function CZDOO_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Ge
 		end
 	end)
 end
-local function WOAAG_fake_script() -- Fake Script: Workspace.MobileVers.SoundSystem
+local function MDRKTM_fake_script() -- Fake Script: Workspace.MobileVers.SoundSystem
     local script = Instance.new("LocalScript")
     script.Name = "SoundSystem"
     script.Parent = Converted["_MobileVers"]
@@ -519,7 +518,7 @@ local function WOAAG_fake_script() -- Fake Script: Workspace.MobileVers.SoundSys
 		end
 	end
 end
-local function JVPZOAO_fake_script() -- Fake Script: Workspace.MobileVers.ProxyInfo.LocalScript
+local function HKYJ_fake_script() -- Fake Script: Workspace.MobileVers.ProxyInfo.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_ProxyInfo"]
@@ -540,7 +539,7 @@ local function JVPZOAO_fake_script() -- Fake Script: Workspace.MobileVers.ProxyI
 		script.Parent.Parent.Frame.fenv.Visible = false
 	end)
 end
-local function EVLY_fake_script() -- Fake Script: Workspace.MobileVers.Minus.LocalScript
+local function MKPB_fake_script() -- Fake Script: Workspace.MobileVers.Minus.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Minus"]
@@ -568,7 +567,7 @@ local function EVLY_fake_script() -- Fake Script: Workspace.MobileVers.Minus.Loc
 		end
 	end)
 end
-local function SKUNLJ_fake_script() -- Fake Script: Workspace.MobileVers.R.LocalScript
+local function DGHFV_fake_script() -- Fake Script: Workspace.MobileVers.R.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_R"]
@@ -605,7 +604,7 @@ local function SKUNLJ_fake_script() -- Fake Script: Workspace.MobileVers.R.Local
 		print('Auto Rejoin','Auto rejoin enabled')
 	end)
 end
-local function PFTAY_fake_script() -- Fake Script: Workspace.MobileVers.SlenderMagnitude.TextLabel.LocalScript
+local function GSKKUU_fake_script() -- Fake Script: Workspace.MobileVers.SlenderMagnitude.TextLabel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextLabel5"]
@@ -620,14 +619,17 @@ local function PFTAY_fake_script() -- Fake Script: Workspace.MobileVers.SlenderM
 
 	local TL = script.Parent
 	local cam = workspace.CurrentCamera
+	local GameValues = game.ReplicatedStorage.GameValues
+	local CurrentSlender = GameValues.lastslender.Value
+	local Players = game.Players:GetPlayers()
 	
-	for _, v in pairs(game.Workspace:GetChildren()) do
-		if v:FindFirstChild("SlenderProp") then
-			TL.Text = "Slender: " .. math.floor((cam.CFrame - v.PrimaryPart.CFrame).magnitude) .. "m away"
+	for i, v in pairs(Players)do
+		if v.Character~= nil and v.Name == CurrentSlender then
+			TL.Text = "Slender: " .. math.floor((cam.CFrame - v.Character.HumanoidRootPart.CFrame).magnitude) .. "m away"
 		end
 	end
 end
-local function GEVLD_fake_script() -- Fake Script: Workspace.MobileVers.QuickExecute.TextButton.LocalScript
+local function ZNZNFFH_fake_script() -- Fake Script: Workspace.MobileVers.QuickExecute.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -640,6 +642,8 @@ local function GEVLD_fake_script() -- Fake Script: Workspace.MobileVers.QuickExe
         return req(obj)
     end
 
+	local cam = workspace.CurrentCamera
+	
 	local function createGuiPages(parent) --// Page Function
 		if parent.Transparency == 0 then
 			local BGui = Instance.new("BillboardGui")
@@ -651,7 +655,7 @@ local function GEVLD_fake_script() -- Fake Script: Workspace.MobileVers.QuickExe
 	
 			local text = Instance.new("TextLabel")
 			text.Parent = BGui
-			text.Text = "Page"
+			text.Text = "Page (" ..math.floor((cam.CFrame - parent.CFrame).magnitude).. "m away)"
 			text.TextScaled = true
 			text.BackgroundTransparency = 1
 			text.Size = UDim2.new(1, 0, 1, 0)
@@ -690,7 +694,7 @@ local function GEVLD_fake_script() -- Fake Script: Workspace.MobileVers.QuickExe
 		text.BackgroundTransparency = 1
 		text.Size = UDim2.new(1, 0, 1, 0)
 		text.TextColor3 = Color3.fromRGB(0, 0, 255)
-		text.Text = "Generator"
+		text.Text = "Generator (" ..math.floor((cam.CFrame - parent.PrimaryPart.CFrame).magnitude).. "m away)"
 	
 		if parent:FindFirstChild("On") then
 	
@@ -754,13 +758,13 @@ local function GEVLD_fake_script() -- Fake Script: Workspace.MobileVers.QuickExe
 	end)
 end
 
-coroutine.wrap(VJFKEC_fake_script)()
-coroutine.wrap(HXWWA_fake_script)()
-coroutine.wrap(MXNOZW_fake_script)()
-coroutine.wrap(CZDOO_fake_script)()
-coroutine.wrap(WOAAG_fake_script)()
-coroutine.wrap(JVPZOAO_fake_script)()
-coroutine.wrap(EVLY_fake_script)()
-coroutine.wrap(SKUNLJ_fake_script)()
-coroutine.wrap(PFTAY_fake_script)()
-coroutine.wrap(GEVLD_fake_script)()
+coroutine.wrap(YEMJM_fake_script)()
+coroutine.wrap(QZWJ_fake_script)()
+coroutine.wrap(VXZVSRQ_fake_script)()
+coroutine.wrap(XVHP_fake_script)()
+coroutine.wrap(MDRKTM_fake_script)()
+coroutine.wrap(HKYJ_fake_script)()
+coroutine.wrap(MKPB_fake_script)()
+coroutine.wrap(DGHFV_fake_script)()
+coroutine.wrap(GSKKUU_fake_script)()
+coroutine.wrap(ZNZNFFH_fake_script)()
