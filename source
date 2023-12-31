@@ -303,7 +303,7 @@ Converted["_UIStroke"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 Converted["_UIStroke"].LineJoinMode = Enum.LineJoinMode.Bevel
 Converted["_UIStroke"].Parent = Converted["_TextButton"]
 
-Converted["_MobileVers"].Parent = game.Workspace
+Converted["_MobileVers"].Parent = game.CoreGui
 
 local fake_module_scripts = {}
 
