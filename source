@@ -1,80 +1,101 @@
---[[
-	Able to stalk but please don't hate!
-]]
+local precoss = game.CoreGui:FindFirstChild("MobileVers")
 
-local EV = game.CoreGui:FindFirstChild("EmulatorVers")
-if EV then
-	EV:Destroy()
+if precoss then
+	precoss:Destroy()
 end
 
 local Converted = {
-	["_EmulatorVers"] = Instance.new("ScreenGui");
+	["_MobileVers"] = Instance.new("ScreenGui");
 	["_Frame"] = Instance.new("Frame");
-	["_LocalScript"] = Instance.new("LocalScript");
 	["_UICorner"] = Instance.new("UICorner");
-	["_Generators"] = Instance.new("TextLabel");
-	["_LocalScript1"] = Instance.new("LocalScript");
-	["_GensQuickOpen"] = Instance.new("TextLabel");
-	["_LocalScript2"] = Instance.new("LocalScript");
-	["_Pages"] = Instance.new("TextLabel");
-	["_LocalScript3"] = Instance.new("LocalScript");
-	["_Slender"] = Instance.new("TextLabel");
-	["_LocalScript4"] = Instance.new("LocalScript");
 	["_fenv"] = Instance.new("Frame");
-	["_shadowHolder"] = Instance.new("Frame");
-	["_umbraShadow"] = Instance.new("ImageLabel");
-	["_penumbraShadow"] = Instance.new("ImageLabel");
-	["_ambientShadow"] = Instance.new("ImageLabel");
 	["_TextLabel"] = Instance.new("TextLabel");
-	["_SocketPulse"] = Instance.new("LocalScript");
+	["_Shadow"] = Instance.new("ImageLabel");
+	["_Pages"] = Instance.new("Frame");
+	["_TextLabel1"] = Instance.new("TextButton");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_Slender"] = Instance.new("Frame");
+	["_TextLabel2"] = Instance.new("TextButton");
+	["_LocalScript1"] = Instance.new("LocalScript");
+	["_GensQuickOpen"] = Instance.new("Frame");
+	["_TextLabel3"] = Instance.new("TextButton");
+	["_LocalScript2"] = Instance.new("LocalScript");
+	["_Generators"] = Instance.new("Frame");
+	["_TextLabel4"] = Instance.new("TextButton");
+	["_LocalScript3"] = Instance.new("LocalScript");
+	["_clicking"] = Instance.new("Sound");
+	["_hovers"] = Instance.new("Sound");
+	["_leaves"] = Instance.new("Sound");
+	["_SoundSystem"] = Instance.new("LocalScript");
 	["_ProxyInfo"] = Instance.new("TextLabel");
+	["_LocalScript4"] = Instance.new("LocalScript");
+	["_Minus"] = Instance.new("TextButton");
 	["_LocalScript5"] = Instance.new("LocalScript");
+	["_R"] = Instance.new("TextButton");
+	["_LocalScript6"] = Instance.new("LocalScript");
+	["_SlenderMagnitude"] = Instance.new("Frame");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_TextLabel5"] = Instance.new("TextLabel");
+	["_LocalScript7"] = Instance.new("LocalScript");
+	["_QuickExecute"] = Instance.new("Frame");
+	["_TextButton"] = Instance.new("TextButton");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_UIStroke"] = Instance.new("UIStroke");
+	["_LocalScript8"] = Instance.new("LocalScript");
 }
 
-Converted["_EmulatorVers"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Converted["_EmulatorVers"].Name = "EmulatorVers"
+Converted["_MobileVers"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_MobileVers"].Name = "MobileVers"
 
 Converted["_Frame"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(58.00000034272671, 58.00000034272671, 58.00000034272671)
 Converted["_Frame"].Position = UDim2.new(0.114532016, 0, 0.5, 0)
 Converted["_Frame"].Selectable = true
 Converted["_Frame"].Size = UDim2.new(0.154320985, 0, 0.300000012, 0)
-Converted["_Frame"].Parent = Converted["_EmulatorVers"]
+Converted["_Frame"].Parent = Converted["_MobileVers"]
 
 Converted["_UICorner"].Parent = Converted["_Frame"]
 
-Converted["_Generators"].Font = Enum.Font.Ubuntu
-Converted["_Generators"].Text = "Show Geners (Z)"
-Converted["_Generators"].TextColor3 = Color3.fromRGB(255, 165.00000536441803, 0)
-Converted["_Generators"].TextScaled = true
-Converted["_Generators"].TextSize = 14
-Converted["_Generators"].TextWrapped = true
-Converted["_Generators"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Generators"].BorderSizePixel = 0
-Converted["_Generators"].Position = UDim2.new(0, 0, 0.527777135, 0)
-Converted["_Generators"].Size = UDim2.new(1, 0, 0.157232702, 0)
-Converted["_Generators"].Name = "Generators"
-Converted["_Generators"].Parent = Converted["_Frame"]
+Converted["_fenv"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_fenv"].BackgroundTransparency = 0.699999988079071
+Converted["_fenv"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_fenv"].BorderSizePixel = 0
+Converted["_fenv"].Position = UDim2.new(1.10400009, 0, 0.094032146, 0)
+Converted["_fenv"].Size = UDim2.new(1.88660419, 0, 0.811103463, 0)
+Converted["_fenv"].Visible = false
+Converted["_fenv"].Name = "fenv"
+Converted["_fenv"].Parent = Converted["_Frame"]
 
-Converted["_GensQuickOpen"].Font = Enum.Font.Ubuntu
-Converted["_GensQuickOpen"].Text = "Tele Geners (Q)"
-Converted["_GensQuickOpen"].TextColor3 = Color3.fromRGB(0, 0, 255)
-Converted["_GensQuickOpen"].TextScaled = true
-Converted["_GensQuickOpen"].TextSize = 14
-Converted["_GensQuickOpen"].TextWrapped = true
-Converted["_GensQuickOpen"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_GensQuickOpen"].BorderSizePixel = 0
-Converted["_GensQuickOpen"].Position = UDim2.new(0, 0, 0.74790293, 0)
-Converted["_GensQuickOpen"].Size = UDim2.new(1, 0, 0.157232702, 0)
-Converted["_GensQuickOpen"].Name = "GensQuickOpen"
-Converted["_GensQuickOpen"].Parent = Converted["_Frame"]
+Converted["_TextLabel"].Font = Enum.Font.Unknown
+Converted["_TextLabel"].Text = "White Text - Show all pages; Red Text - Show the slender; Green Text - Show all generators; Orange Text - Teleport to all generators; R Letter - Auto rejoin when disconnected or kicked; Minus Symbol - Toggle UI; Green Button - Execute (WhiteText, RedText and GreenText); Gray Label - Distance of slender."
+Converted["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].TextScaled = true
+Converted["_TextLabel"].TextSize = 14
+Converted["_TextLabel"].TextWrapped = true
+Converted["_TextLabel"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].BackgroundTransparency = 1
+Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel"].BorderSizePixel = 0
+Converted["_TextLabel"].Position = UDim2.new(0.0316455774, 0, 0.0337839611, 0)
+Converted["_TextLabel"].Size = UDim2.new(0.93399179, 0, 0.921875, 0)
+Converted["_TextLabel"].Parent = Converted["_fenv"]
 
-Converted["_Pages"].Font = Enum.Font.Ubuntu
-Converted["_Pages"].Text = "Show Pages (Z)"
-Converted["_Pages"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Pages"].TextScaled = true
-Converted["_Pages"].TextSize = 14
-Converted["_Pages"].TextWrapped = true
+Converted["_Shadow"].Image = "rbxassetid://186491278"
+Converted["_Shadow"].ImageTransparency = 0.6000000238418579
+Converted["_Shadow"].ScaleType = Enum.ScaleType.Slice
+Converted["_Shadow"].SliceCenter = Rect.new(48, 48, 48, 48)
+Converted["_Shadow"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_Shadow"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Shadow"].BackgroundTransparency = 1
+Converted["_Shadow"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Shadow"].BorderSizePixel = 0
+Converted["_Shadow"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_Shadow"].Size = UDim2.new(1, 50, 1, 50)
+Converted["_Shadow"].ZIndex = -9999
+Converted["_Shadow"].Name = "Shadow"
+Converted["_Shadow"].Parent = Converted["_fenv"]
+
 Converted["_Pages"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Pages"].BorderSizePixel = 0
 Converted["_Pages"].Position = UDim2.new(0, 0, 0.0940322429, 0)
@@ -82,12 +103,23 @@ Converted["_Pages"].Size = UDim2.new(1, 0, 0.157232702, 0)
 Converted["_Pages"].Name = "Pages"
 Converted["_Pages"].Parent = Converted["_Frame"]
 
-Converted["_Slender"].Font = Enum.Font.Ubuntu
-Converted["_Slender"].Text = "Show Slendy (Z)"
-Converted["_Slender"].TextColor3 = Color3.fromRGB(255, 0, 0)
-Converted["_Slender"].TextScaled = true
-Converted["_Slender"].TextSize = 14
-Converted["_Slender"].TextWrapped = true
+Converted["_TextLabel1"].Font = Enum.Font.Unknown
+Converted["_TextLabel1"].Text = "Show Segment"
+Converted["_TextLabel1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel1"].TextScaled = true
+Converted["_TextLabel1"].TextSize = 14
+Converted["_TextLabel1"].TextWrapped = true
+Converted["_TextLabel1"].Active = false
+Converted["_TextLabel1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel1"].BackgroundTransparency = 1
+Converted["_TextLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel1"].BorderSizePixel = 0
+Converted["_TextLabel1"].Position = UDim2.new(0.0491530336, 0, 0, 0)
+Converted["_TextLabel1"].Selectable = false
+Converted["_TextLabel1"].Size = UDim2.new(0, 110, 0, 25)
+Converted["_TextLabel1"].Name = "TextLabel"
+Converted["_TextLabel1"].Parent = Converted["_Pages"]
+
 Converted["_Slender"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Slender"].BorderSizePixel = 0
 Converted["_Slender"].Position = UDim2.new(0, 0, 0.310904652, 0)
@@ -95,80 +127,88 @@ Converted["_Slender"].Size = UDim2.new(1, 0, 0.157232702, 0)
 Converted["_Slender"].Name = "Slender"
 Converted["_Slender"].Parent = Converted["_Frame"]
 
-Converted["_fenv"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
-Converted["_fenv"].BackgroundTransparency = 0.699999988079071
-Converted["_fenv"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_fenv"].BorderSizePixel = 0
-Converted["_fenv"].Position = UDim2.new(1.10399997, 0, 0.094032146, 0)
-Converted["_fenv"].Size = UDim2.new(1.26400006, 0, 0.805031419, 0)
-Converted["_fenv"].Visible = false
-Converted["_fenv"].Name = "fenv"
-Converted["_fenv"].Parent = Converted["_Frame"]
+Converted["_TextLabel2"].Font = Enum.Font.Unknown
+Converted["_TextLabel2"].Text = "Show Slender"
+Converted["_TextLabel2"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel2"].TextScaled = true
+Converted["_TextLabel2"].TextSize = 14
+Converted["_TextLabel2"].TextWrapped = true
+Converted["_TextLabel2"].Active = false
+Converted["_TextLabel2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel2"].BackgroundTransparency = 1
+Converted["_TextLabel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel2"].BorderSizePixel = 0
+Converted["_TextLabel2"].Position = UDim2.new(0.0491530336, 0, 0, 0)
+Converted["_TextLabel2"].Selectable = false
+Converted["_TextLabel2"].Size = UDim2.new(0, 110, 0, 25)
+Converted["_TextLabel2"].Name = "TextLabel"
+Converted["_TextLabel2"].Parent = Converted["_Slender"]
 
-Converted["_shadowHolder"].BackgroundTransparency = 1
-Converted["_shadowHolder"].Size = UDim2.new(1, 0, 1, 0)
-Converted["_shadowHolder"].ZIndex = 0
-Converted["_shadowHolder"].Name = "shadowHolder"
-Converted["_shadowHolder"].Parent = Converted["_fenv"]
+Converted["_GensQuickOpen"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_GensQuickOpen"].BorderSizePixel = 0
+Converted["_GensQuickOpen"].Position = UDim2.new(0, 0, 0.74790293, 0)
+Converted["_GensQuickOpen"].Size = UDim2.new(1, 0, 0.157232702, 0)
+Converted["_GensQuickOpen"].Name = "GensQuickOpen"
+Converted["_GensQuickOpen"].Parent = Converted["_Frame"]
 
-Converted["_umbraShadow"].Image = "rbxassetid://1316045217"
-Converted["_umbraShadow"].ImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_umbraShadow"].ImageTransparency = 0.8600000143051147
-Converted["_umbraShadow"].ScaleType = Enum.ScaleType.Slice
-Converted["_umbraShadow"].SliceCenter = Rect.new(10, 10, 118, 118)
-Converted["_umbraShadow"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_umbraShadow"].BackgroundTransparency = 1
-Converted["_umbraShadow"].Position = UDim2.new(0.5, 0, 0.5, 0)
-Converted["_umbraShadow"].Size = UDim2.new(1, 2, 1, 2)
-Converted["_umbraShadow"].ZIndex = 0
-Converted["_umbraShadow"].Name = "umbraShadow"
-Converted["_umbraShadow"].Parent = Converted["_shadowHolder"]
+Converted["_TextLabel3"].Font = Enum.Font.Unknown
+Converted["_TextLabel3"].Text = "Tele Generators"
+Converted["_TextLabel3"].TextColor3 = Color3.fromRGB(255, 170.0000050663948, 0)
+Converted["_TextLabel3"].TextScaled = true
+Converted["_TextLabel3"].TextSize = 14
+Converted["_TextLabel3"].TextWrapped = true
+Converted["_TextLabel3"].Active = false
+Converted["_TextLabel3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel3"].BackgroundTransparency = 1
+Converted["_TextLabel3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel3"].BorderSizePixel = 0
+Converted["_TextLabel3"].Position = UDim2.new(0.0491530336, 0, 0, 0)
+Converted["_TextLabel3"].Selectable = false
+Converted["_TextLabel3"].Size = UDim2.new(0, 110, 0, 25)
+Converted["_TextLabel3"].Name = "TextLabel"
+Converted["_TextLabel3"].Parent = Converted["_GensQuickOpen"]
 
-Converted["_penumbraShadow"].Image = "rbxassetid://1316045217"
-Converted["_penumbraShadow"].ImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_penumbraShadow"].ImageTransparency = 0.8799999952316284
-Converted["_penumbraShadow"].ScaleType = Enum.ScaleType.Slice
-Converted["_penumbraShadow"].SliceCenter = Rect.new(10, 10, 118, 118)
-Converted["_penumbraShadow"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_penumbraShadow"].BackgroundTransparency = 1
-Converted["_penumbraShadow"].Position = UDim2.new(0.5, 0, 0.5, 0)
-Converted["_penumbraShadow"].Size = UDim2.new(1, 2, 1, 2)
-Converted["_penumbraShadow"].ZIndex = 0
-Converted["_penumbraShadow"].Name = "penumbraShadow"
-Converted["_penumbraShadow"].Parent = Converted["_shadowHolder"]
+Converted["_Generators"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Generators"].BorderSizePixel = 0
+Converted["_Generators"].Position = UDim2.new(0, 0, 0.527777135, 0)
+Converted["_Generators"].Size = UDim2.new(1, 0, 0.157232702, 0)
+Converted["_Generators"].Name = "Generators"
+Converted["_Generators"].Parent = Converted["_Frame"]
 
-Converted["_ambientShadow"].Image = "rbxassetid://1316045217"
-Converted["_ambientShadow"].ImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_ambientShadow"].ImageTransparency = 0.8799999952316284
-Converted["_ambientShadow"].ScaleType = Enum.ScaleType.Slice
-Converted["_ambientShadow"].SliceCenter = Rect.new(10, 10, 118, 118)
-Converted["_ambientShadow"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_ambientShadow"].BackgroundTransparency = 1
-Converted["_ambientShadow"].Position = UDim2.new(0.5, 0, 0.5, 0)
-Converted["_ambientShadow"].Size = UDim2.new(1, 2, 1, 2)
-Converted["_ambientShadow"].ZIndex = 0
-Converted["_ambientShadow"].Name = "ambientShadow"
-Converted["_ambientShadow"].Parent = Converted["_shadowHolder"]
+Converted["_TextLabel4"].Font = Enum.Font.Unknown
+Converted["_TextLabel4"].Text = "Show Generators"
+Converted["_TextLabel4"].TextColor3 = Color3.fromRGB(0, 255, 0)
+Converted["_TextLabel4"].TextScaled = true
+Converted["_TextLabel4"].TextSize = 14
+Converted["_TextLabel4"].TextWrapped = true
+Converted["_TextLabel4"].Active = false
+Converted["_TextLabel4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel4"].BackgroundTransparency = 1
+Converted["_TextLabel4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel4"].BorderSizePixel = 0
+Converted["_TextLabel4"].Position = UDim2.new(0.0491530336, 0, 0, 0)
+Converted["_TextLabel4"].Selectable = false
+Converted["_TextLabel4"].Size = UDim2.new(0, 110, 0, 25)
+Converted["_TextLabel4"].Name = "TextLabel"
+Converted["_TextLabel4"].Parent = Converted["_Generators"]
 
-Converted["_TextLabel"].Font = Enum.Font.Ubuntu
-Converted["_TextLabel"].Text = "Minus - Toggle UI; Z - Show Pages, Show Slendy, Show Geners; Q - Teleport To Generators; Device Vers - Hover on it to visible this form; Simply rejoin to destroy UI; Made by @creepstu..."
-Converted["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel"].TextScaled = true
-Converted["_TextLabel"].TextSize = 14
-Converted["_TextLabel"].TextStrokeTransparency = 0
-Converted["_TextLabel"].TextWrapped = true
-Converted["_TextLabel"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_TextLabel"].TextYAlignment = Enum.TextYAlignment.Top
-Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel"].BackgroundTransparency = 1
-Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel"].BorderSizePixel = 0
-Converted["_TextLabel"].Position = UDim2.new(0.03164557, 0, 0.0337839127, 0)
-Converted["_TextLabel"].Size = UDim2.new(0.936708868, 0, 0.921875, 0)
-Converted["_TextLabel"].Parent = Converted["_fenv"]
+Converted["_clicking"].SoundId = "rbxassetid://720166642"
+Converted["_clicking"].Volume = 1
+Converted["_clicking"].Name = "clicking"
+Converted["_clicking"].Parent = Converted["_MobileVers"]
+
+Converted["_hovers"].SoundId = "rbxassetid://6976440355"
+Converted["_hovers"].Volume = 1
+Converted["_hovers"].Name = "hovers"
+Converted["_hovers"].Parent = Converted["_MobileVers"]
+
+Converted["_leaves"].SoundId = "rbxassetid://140910211"
+Converted["_leaves"].Volume = 1
+Converted["_leaves"].Name = "leaves"
+Converted["_leaves"].Parent = Converted["_MobileVers"]
 
 Converted["_ProxyInfo"].Font = Enum.Font.Ubuntu
-Converted["_ProxyInfo"].Text = "Device Vers"
+Converted["_ProxyInfo"].Text = "INFO"
 Converted["_ProxyInfo"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_ProxyInfo"].TextScaled = true
 Converted["_ProxyInfo"].TextSize = 14
@@ -178,20 +218,100 @@ Converted["_ProxyInfo"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_ProxyInfo"].BackgroundTransparency = 1
 Converted["_ProxyInfo"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_ProxyInfo"].BorderSizePixel = 0
-Converted["_ProxyInfo"].Position = UDim2.new(-0.0302469134, 0, 0.480188668, 0)
+Converted["_ProxyInfo"].Position = UDim2.new(-0.0315111317, -1, 0.480188668, 1)
 Converted["_ProxyInfo"].Rotation = 90
-Converted["_ProxyInfo"].Size = UDim2.new(0.104938269, 0, 0.0377358496, 0)
+Converted["_ProxyInfo"].Size = UDim2.new(0.107466705, 0, 0.0377358496, 0)
 Converted["_ProxyInfo"].Name = "ProxyInfo"
-Converted["_ProxyInfo"].Parent = Converted["_EmulatorVers"]
+Converted["_ProxyInfo"].Parent = Converted["_MobileVers"]
 
-Converted["_EmulatorVers"].Parent = game.CoreGui
+Converted["_Minus"].Font = Enum.Font.Ubuntu
+Converted["_Minus"].Text = "-"
+Converted["_Minus"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Minus"].TextScaled = true
+Converted["_Minus"].TextSize = 14
+Converted["_Minus"].TextWrapped = true
+Converted["_Minus"].BackgroundColor3 = Color3.fromRGB(58.00000414252281, 58.00000414252281, 58.00000414252281)
+Converted["_Minus"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Minus"].BorderSizePixel = 0
+Converted["_Minus"].Position = UDim2.new(0.00987654366, 0, 0.376811296, 0)
+Converted["_Minus"].Size = UDim2.new(0.0246913582, 0, 0.0377358496, 0)
+Converted["_Minus"].Name = "Minus"
+Converted["_Minus"].Parent = Converted["_MobileVers"]
+
+Converted["_R"].Font = Enum.Font.Ubuntu
+Converted["_R"].Text = "R"
+Converted["_R"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_R"].TextScaled = true
+Converted["_R"].TextSize = 14
+Converted["_R"].TextWrapped = true
+Converted["_R"].BackgroundColor3 = Color3.fromRGB(58.00000414252281, 58.00000414252281, 58.00000414252281)
+Converted["_R"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_R"].BorderSizePixel = 0
+Converted["_R"].Position = UDim2.new(0.00987654366, 0, 0.582471669, 0)
+Converted["_R"].Size = UDim2.new(0.0246913582, 0, 0.0377358496, 0)
+Converted["_R"].Name = "R"
+Converted["_R"].Parent = Converted["_MobileVers"]
+
+Converted["_SlenderMagnitude"].BackgroundColor3 = Color3.fromRGB(58.00000414252281, 58.00000414252281, 58.00000414252281)
+Converted["_SlenderMagnitude"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_SlenderMagnitude"].BorderSizePixel = 0
+Converted["_SlenderMagnitude"].Position = UDim2.new(0.372945637, 0, 0.933962286, 0)
+Converted["_SlenderMagnitude"].Size = UDim2.new(0.252844512, 0, 0.0660377368, 0)
+Converted["_SlenderMagnitude"].Name = "SlenderMagnitude"
+Converted["_SlenderMagnitude"].Parent = Converted["_MobileVers"]
+
+Converted["_UICorner1"].Parent = Converted["_SlenderMagnitude"]
+
+Converted["_TextLabel5"].Font = Enum.Font.Unknown
+Converted["_TextLabel5"].Text = "Slender: ?m away"
+Converted["_TextLabel5"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel5"].TextScaled = true
+Converted["_TextLabel5"].TextSize = 18
+Converted["_TextLabel5"].TextStrokeTransparency = 0
+Converted["_TextLabel5"].TextWrapped = true
+Converted["_TextLabel5"].AnchorPoint = Vector2.new(0, 1)
+Converted["_TextLabel5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel5"].BackgroundTransparency = 1
+Converted["_TextLabel5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel5"].BorderSizePixel = 0
+Converted["_TextLabel5"].Position = UDim2.new(0.165000007, 0, 1, 0)
+Converted["_TextLabel5"].Size = UDim2.new(0.675000012, 0, 1, 0)
+Converted["_TextLabel5"].Parent = Converted["_SlenderMagnitude"]
+
+Converted["_QuickExecute"].BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Converted["_QuickExecute"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_QuickExecute"].Position = UDim2.new(0.43615678, 0, 0.890566051, 0)
+Converted["_QuickExecute"].Size = UDim2.new(0.126422256, 0, 0.0433962271, 0)
+Converted["_QuickExecute"].Name = "QuickExecute"
+Converted["_QuickExecute"].Parent = Converted["_MobileVers"]
+
+Converted["_TextButton"].Font = Enum.Font.Unknown
+Converted["_TextButton"].Text = "Quick Execute"
+Converted["_TextButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextButton"].TextScaled = true
+Converted["_TextButton"].TextSize = 14
+Converted["_TextButton"].TextWrapped = true
+Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(0, 85.0000025331974, 0)
+Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextButton"].BorderSizePixel = 0
+Converted["_TextButton"].Size = UDim2.new(0.99999994, 0, 1, 0)
+Converted["_TextButton"].Parent = Converted["_QuickExecute"]
+
+Converted["_UICorner2"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner2"].Parent = Converted["_TextButton"]
+
+Converted["_UIStroke"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke"].LineJoinMode = Enum.LineJoinMode.Bevel
+Converted["_UIStroke"].Parent = Converted["_TextButton"]
+
+Converted["_MobileVers"].Parent = game.CoreGui
 
 local fake_module_scripts = {}
 
-local function XSAF_fake_script() -- Fake Script: Workspace.EmulatorVers.Frame.LocalScript
+local function VJFKEC_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Pages.TextLabel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
-    script.Parent = Converted["_Frame"]
+    script.Parent = Converted["_TextLabel1"]
     local req = require
     local require = function(obj)
         local fake = fake_module_scripts[obj]
@@ -201,23 +321,61 @@ local function XSAF_fake_script() -- Fake Script: Workspace.EmulatorVers.Frame.L
         return req(obj)
     end
 
-	local frame = script.Parent
-	local InS = game:GetService("UserInputService")
+	local function createGuiPages(parent)
+		if parent.Transparency == 0 then
+			local BGui = Instance.new("BillboardGui")
+			BGui.Parent = parent
+			BGui.AlwaysOnTop = true
+			BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+			BGui.StudsOffset = Vector3.new(0, 3, 0)
+			BGui.Size = UDim2.new(5, 0, 1.5, 0)
 	
-	InS.InputBegan:Connect(function(input, GPE)
-		if input.KeyCode == Enum.KeyCode.Minus then
-			if frame.Visible == true then
-				frame.Visible = false
-			else
-				frame.Visible = true
+			local text = Instance.new("TextLabel")
+			text.Parent = BGui
+			text.Text = "Page"
+			text.TextScaled = true
+			text.BackgroundTransparency = 1
+			text.Size = UDim2.new(1, 0, 1, 0)
+			text.TextColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.Workspace.MAP.Pages ~= nil and game.Workspace.MAP.HPageSpawns ~= nil then
+			local model1 = game.Workspace.MAP.Pages
+	
+			for _, v in pairs(model1:GetChildren()) do
+				createGuiPages(v)
+	
+				v.Changed:Connect(function()
+					if v.Transparency == 1 then
+	
+						local BGui = v.BillboardGui
+						BGui:Destroy()
+					end
+				end)
+			end
+	
+			local model2 = game.Workspace.MAP.HPageSpawns
+	
+			for _, v in pairs(model2:GetChildren()) do
+				createGuiPages(v)
+	
+				v.Changed:Connect(function()
+					if v.Transparency == 1 then
+	
+						local BGui = v.BillboardGui
+						BGui:Destroy()
+					end
+				end)
 			end
 		end
 	end)
 end
-local function NFMACIH_fake_script() -- Fake Script: Workspace.EmulatorVers.Frame.Generators.LocalScript
+local function HXWWA_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Slender.TextLabel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
-    script.Parent = Converted["_Generators"]
+    script.Parent = Converted["_TextLabel2"]
     local req = require
     local require = function(obj)
         local fake = fake_module_scripts[obj]
@@ -227,8 +385,66 @@ local function NFMACIH_fake_script() -- Fake Script: Workspace.EmulatorVers.Fram
         return req(obj)
     end
 
-	local InS = game:GetService("UserInputService")
+	local function createGuiSlender(parent)
+		local BGui = Instance.new("BillboardGui")
+		BGui.Parent = parent
+		BGui.AlwaysOnTop = true
+		BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		BGui.StudsOffset = Vector3.new(0, 3, 0)
+		BGui.Size = UDim2.new(5, 0, 1.5, 0)
 	
+		local text = Instance.new("TextLabel")
+		text.Parent = BGui
+		text.Text = "Slender"
+		text.TextScaled = true
+		text.BackgroundTransparency = 1
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.TextColor3 = Color3.fromRGB(255, 0, 0)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for _, v in pairs(game.Workspace:GetChildren()) do
+			if v:FindFirstChild("SlenderProp") then
+				createGuiSlender(v)
+			end
+		end
+	end)
+end
+local function MXNOZW_fake_script() -- Fake Script: Workspace.MobileVers.Frame.GensQuickOpen.TextLabel.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextLabel3"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local CH = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+		for _, y in pairs(workspace.MAP.GENS:GetDescendants()) do
+			if y:IsA('BoolValue') and y.Name == "On" and y.Value == false then
+				CH.CFrame = y.Parent.Prompt1.CFrame
+			end
+		end
+	end)
+end
+local function CZDOO_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Generators.TextLabel.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextLabel4"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
 	local function createGuiGens(parent)
 		local BGui = Instance.new("BillboardGui")
 		BGui.Parent = parent
@@ -254,29 +470,26 @@ local function NFMACIH_fake_script() -- Fake Script: Workspace.EmulatorVers.Fram
 		end
 	end
 	
-	InS.InputBegan:Connect(function(input, GPE)
-		if input.KeyCode == Enum.KeyCode.Z then
+	script.Parent.MouseButton1Click:Connect(function() 
+		local model = game.Workspace.MAP.GENS
+		for _, v in pairs(model:GetChildren()) do
+			createGuiGens(v)
 	
-			local model = game.Workspace.MAP.GENS
-			for _, v in pairs(model:GetChildren()) do
-				createGuiGens(v)
+			if v:FindFirstChild("On") then
+				local isOn = v.On
 	
-				if v:FindFirstChild("On") then
-					local isOn = v.On
-	
-					isOn.Changed:Connect(function()
-						v.BillboardGui.TextLabel.Text = "Generator (Activated)"
-						v.BillboardGui.TextLabel.TextColor3 = Color3.fromRGB(255, 150, 0)
-					end)
-				end
+				isOn.Changed:Connect(function()
+					v.BillboardGui.TextLabel.Text = "Generator (Activated)"
+					v.BillboardGui.TextLabel.TextColor3 = Color3.fromRGB(255, 150, 0)
+				end)
 			end
 		end
 	end)
 end
-local function UGEJ_fake_script() -- Fake Script: Workspace.EmulatorVers.Frame.GensQuickOpen.LocalScript
+local function WOAAG_fake_script() -- Fake Script: Workspace.MobileVers.SoundSystem
     local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_GensQuickOpen"]
+    script.Name = "SoundSystem"
+    script.Parent = Converted["_MobileVers"]
     local req = require
     local require = function(obj)
         local fake = fake_module_scripts[obj]
@@ -286,171 +499,27 @@ local function UGEJ_fake_script() -- Fake Script: Workspace.EmulatorVers.Frame.G
         return req(obj)
     end
 
-	game:GetService("UserInputService").InputBegan:Connect(function(input)
-		if input.KeyCode == Enum.KeyCode.Q then
-			local CH = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-			for _, y in pairs(workspace.MAP.GENS:GetDescendants()) do
-				if y:IsA('BoolValue') and y.Name == "On" and y.Value == false then
-					CH.CFrame = y.Parent.Prompt1.CFrame
-				end
-			end
-		end
-	end)
-end
-local function YPGV_fake_script() -- Fake Script: Workspace.EmulatorVers.Frame.Pages.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Pages"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local InS = game:GetService("UserInputService")
-	
-	local function createGuiPages(parent)
-		if parent.Transparency == 0 then
-			local BGui = Instance.new("BillboardGui")
-			BGui.Parent = parent
-			BGui.AlwaysOnTop = true
-			BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-			BGui.StudsOffset = Vector3.new(0, 3, 0)
-			BGui.Size = UDim2.new(5, 0, 1.5, 0)
-	
-			local text = Instance.new("TextLabel")
-			text.Parent = BGui
-			text.Text = "Page"
-			text.TextScaled = true
-			text.BackgroundTransparency = 1
-			text.Size = UDim2.new(1, 0, 1, 0)
-			text.TextColor3 = Color3.fromRGB(255, 255, 255)
-		end
+	local function playSound(sound)
+		script.Parent[sound]:Play()
 	end
 	
-	InS.InputBegan:Connect(function(input, GPE)
-		if input.KeyCode == Enum.KeyCode.Z then
-			if game.Workspace.MAP.Pages ~= nil and game.Workspace.MAP.HPageSpawns ~= nil then
-				local model1 = game.Workspace.MAP.Pages
+	for _, v in pairs(script.Parent:GetDescendants()) do
+		if v:IsA('TextButton') or v:IsA('ImageButton') then
+			v.MouseEnter:Connect(function()
+				playSound("hovers")
+			end)
 	
-				for _, v in pairs(model1:GetChildren()) do
-					createGuiPages(v)
+			v.MouseLeave:Connect(function()
+				playSound("leaves")
+			end)
 	
-					v.Changed:Connect(function()
-						if v.Transparency == 1 then
-	
-							local BGui = v.BillboardGui
-							BGui:Destroy()
-						end
-					end)
-				end
-	
-				local model2 = game.Workspace.MAP.HPageSpawns
-	
-				for _, v in pairs(model2:GetChildren()) do
-					createGuiPages(v)
-	
-					v.Changed:Connect(function()
-						if v.Transparency == 1 then
-	
-							local BGui = v.BillboardGui
-							BGui:Destroy()
-						end
-					end)
-				end
-			end
-		end
-	end)
-end
-local function JBPAC_fake_script() -- Fake Script: Workspace.EmulatorVers.Frame.Slender.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Slender"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local InS = game:GetService("UserInputService")
-	
-	local function createGuiSlender(parent)
-		local BGui = Instance.new("BillboardGui")
-		BGui.Parent = parent
-		BGui.AlwaysOnTop = true
-		BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-		BGui.StudsOffset = Vector3.new(0, 3, 0)
-		BGui.Size = UDim2.new(5, 0, 1.5, 0)
-	
-		local text = Instance.new("TextLabel")
-		text.Parent = BGui
-		text.Text = "Slender"
-		text.TextScaled = true
-		text.BackgroundTransparency = 1
-		text.Size = UDim2.new(1, 0, 1, 0)
-		text.TextColor3 = Color3.fromRGB(255, 0, 0)
-	end
-	
-	
-	InS.InputBegan:Connect(function(input, GPE)
-		if input.KeyCode == Enum.KeyCode.Z then
-	
-			for _, v in pairs(game.Workspace:GetChildren()) do
-				if v:FindFirstChild("SlenderProp") then
-					createGuiSlender(v)
-				end
-			end
-		end
-	
-	end)
-end
-local function IYVMDN_fake_script() -- Fake Script: Workspace.EmulatorVers.SocketPulse
-    local script = Instance.new("LocalScript")
-    script.Name = "SocketPulse"
-    script.Parent = Converted["_EmulatorVers"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	
-	local textLabel = script.Parent:FindFirstChild("ProxyInfo")
-	
-	local isMobile = game:GetService("UserInputService").TouchEnabled
-	
-	local function updateTextLabel()
-		if isMobile then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/creepstu/urban-telegram/main/source"))()
-			task.wait()
-			script.Parent:Destroy()
-		else
-			textLabel.Text = "PC Vers"
+			v.MouseButton1Click:Connect(function()
+				playSound("clicking")
+			end)
 		end
 	end
-	
-	updateTextLabel()
-	
-	game:GetService("UserInputService").InputTypeChanged:Connect(function(inputType)
-		if inputType == Enum.UserInputType.Touch or inputType == Enum.UserInputType.Keyboard then
-			isMobile = true
-		else
-			isMobile = false
-		end
-		updateTextLabel()
-	end)
-	
 end
-local function TWOTX_fake_script() -- Fake Script: Workspace.EmulatorVers.ProxyInfo.LocalScript
+local function JVPZOAO_fake_script() -- Fake Script: Workspace.MobileVers.ProxyInfo.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_ProxyInfo"]
@@ -471,11 +540,227 @@ local function TWOTX_fake_script() -- Fake Script: Workspace.EmulatorVers.ProxyI
 		script.Parent.Parent.Frame.fenv.Visible = false
 	end)
 end
+local function EVLY_fake_script() -- Fake Script: Workspace.MobileVers.Minus.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Minus"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(XSAF_fake_script)()
-coroutine.wrap(NFMACIH_fake_script)()
-coroutine.wrap(UGEJ_fake_script)()
-coroutine.wrap(YPGV_fake_script)()
-coroutine.wrap(JBPAC_fake_script)()
-coroutine.wrap(IYVMDN_fake_script)()
-coroutine.wrap(TWOTX_fake_script)()
+	local frame = script.Parent.Parent.Frame
+	local enable = true
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if enable == true then
+			enable = false
+			script.Parent.Text = "+"
+			frame.Visible = false
+		else
+			enable = true
+			script.Parent.Text = "-"
+			frame.Visible = true
+		end
+	end)
+end
+local function SKUNLJ_fake_script() -- Fake Script: Workspace.MobileVers.R.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_R"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players")
+		local PlaceId = game.PlaceId
+		local JobId = game.JobId
+		local TeleportService = game:GetService("TeleportService")
+		local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promptOverlay")
+		Dir.DescendantAdded:Connect(function(Err)
+			if Err.Name == "ErrorTitle" then
+				Err:GetPropertyChangedSignal("Text"):Connect(function()
+					if Err.Text:sub(0, 12) == "Disconnected" then
+						if #Players:GetPlayers() <= 1 then
+							Players.LocalPlayer:Kick("\nRejoining...")
+							wait()
+							TeleportService:Teleport(PlaceId, Players.LocalPlayer)
+						else
+							TeleportService:TeleportToPlaceInstance(PlaceId, JobId, Players.LocalPlayer)
+						end
+					end
+				end)
+			end
+		end)
+		print('Auto Rejoin','Auto rejoin enabled')
+	end)
+end
+local function PFTAY_fake_script() -- Fake Script: Workspace.MobileVers.SlenderMagnitude.TextLabel.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextLabel5"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local TL = script.Parent
+	local cam = workspace.CurrentCamera
+	
+	for _, v in pairs(game.Workspace:GetChildren()) do
+		if v:FindFirstChild("SlenderProp") then
+			TL.Text = "Slender: " .. math.floor((cam.CFrame - v.PrimaryPart.CFrame).magnitude) .. "m away"
+		end
+	end
+end
+local function GEVLD_fake_script() -- Fake Script: Workspace.MobileVers.QuickExecute.TextButton.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local function createGuiPages(parent) --// Page Function
+		if parent.Transparency == 0 then
+			local BGui = Instance.new("BillboardGui")
+			BGui.Parent = parent
+			BGui.AlwaysOnTop = true
+			BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+			BGui.StudsOffset = Vector3.new(0, 3, 0)
+			BGui.Size = UDim2.new(5, 0, 1.5, 0)
+	
+			local text = Instance.new("TextLabel")
+			text.Parent = BGui
+			text.Text = "Page"
+			text.TextScaled = true
+			text.BackgroundTransparency = 1
+			text.Size = UDim2.new(1, 0, 1, 0)
+			text.TextColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end
+	
+	local function createGuiSlender(parent) --// Slender Function
+		local BGui = Instance.new("BillboardGui")
+		BGui.Parent = parent
+		BGui.AlwaysOnTop = true
+		BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		BGui.StudsOffset = Vector3.new(0, 3, 0)
+		BGui.Size = UDim2.new(5, 0, 1.5, 0)
+	
+		local text = Instance.new("TextLabel")
+		text.Parent = BGui
+		text.Text = "Slender"
+		text.TextScaled = true
+		text.BackgroundTransparency = 1
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.TextColor3 = Color3.fromRGB(255, 0, 0)
+	end
+	
+	local function createGuiGens(parent) --// Generators Function
+		local BGui = Instance.new("BillboardGui")
+		BGui.Parent = parent
+		BGui.AlwaysOnTop = true
+		BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		BGui.StudsOffset = Vector3.new(0, 3, 0)
+		BGui.Size = UDim2.new(5, 0, 1.5, 0)
+	
+		local text = Instance.new("TextLabel")
+		text.Parent = BGui
+		text.TextScaled = true
+		text.BackgroundTransparency = 1
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.TextColor3 = Color3.fromRGB(0, 0, 255)
+		text.Text = "Generator"
+	
+		if parent:FindFirstChild("On") then
+	
+			if parent.On.Value == true then
+				text.Text = "Generator (Activated)"
+				text.TextColor3 = Color3.fromRGB(0, 255, 0)
+			end
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.Workspace.MAP.Pages ~= nil and game.Workspace.MAP.HPageSpawns ~= nil then
+			local model1 = game.Workspace.MAP.Pages
+	
+			for _, v in pairs(model1:GetChildren()) do
+				createGuiPages(v)
+	
+				v.Changed:Connect(function()
+					if v.Transparency == 1 then
+	
+						local BGui = v.BillboardGui
+						BGui:Destroy()
+					end
+				end)
+			end
+	
+			local model2 = game.Workspace.MAP.HPageSpawns
+	
+			for _, v in pairs(model2:GetChildren()) do
+				createGuiPages(v)
+	
+				v.Changed:Connect(function()
+					if v.Transparency == 1 then
+	
+						local BGui = v.BillboardGui
+						BGui:Destroy()
+					end
+				end)
+			end
+		end
+		
+		for _, v in pairs(game.Workspace:GetChildren()) do
+			if v:FindFirstChild("SlenderProp") then
+				createGuiSlender(v)
+			end
+		end
+		
+		local model = game.Workspace.MAP.GENS
+		for _, v in pairs(model:GetChildren()) do
+			createGuiGens(v)
+	
+			if v:FindFirstChild("On") then
+				local isOn = v.On
+	
+				isOn.Changed:Connect(function()
+					v.BillboardGui.TextLabel.Text = "Generator (Activated)"
+					v.BillboardGui.TextLabel.TextColor3 = Color3.fromRGB(255, 150, 0)
+				end)
+			end
+		end
+	end)
+end
+
+coroutine.wrap(VJFKEC_fake_script)()
+coroutine.wrap(HXWWA_fake_script)()
+coroutine.wrap(MXNOZW_fake_script)()
+coroutine.wrap(CZDOO_fake_script)()
+coroutine.wrap(WOAAG_fake_script)()
+coroutine.wrap(JVPZOAO_fake_script)()
+coroutine.wrap(EVLY_fake_script)()
+coroutine.wrap(SKUNLJ_fake_script)()
+coroutine.wrap(PFTAY_fake_script)()
+coroutine.wrap(GEVLD_fake_script)()
