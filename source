@@ -331,7 +331,7 @@ local function YEMJM_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Pa
 	
 			local text = Instance.new("TextLabel")
 			text.Parent = BGui
-			text.Text = "Page (" ..math.floor((workspace.CurrentCamera.CFrame - parent.Vector3).magnitude).. "m away)"
+			text.Text = "Page (" ..math.floor((workspace.CurrentCamera.Vector3 - parent.CFrame).magnitude).. "m away)"
 			text.TextScaled = true
 			text.BackgroundTransparency = 1
 			text.Size = UDim2.new(1, 0, 1, 0)
