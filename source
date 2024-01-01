@@ -331,7 +331,7 @@ local function YEMJM_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Pa
 	
 			local text = Instance.new("TextLabel")
 			text.Parent = BGui
-			text.Text = "Page (" ..math.floor((workspace.CurrentCamera.Vector3 - parent.CFrame).magnitude).. "m away)"
+			text.Text = "Page (" ..math.floor((workspace.Camera.CFrame - parent.CFrame).magnitude).. "m away)"
 			text.TextScaled = true
 			text.BackgroundTransparency = 1
 			text.Size = UDim2.new(1, 0, 1, 0)
@@ -458,7 +458,7 @@ local function XVHP_fake_script() -- Fake Script: Workspace.MobileVers.Frame.Gen
 		text.BackgroundTransparency = 1
 		text.Size = UDim2.new(1, 0, 1, 0)
 		text.TextColor3 = Color3.fromRGB(0, 0, 255)
-		text.Text = "Generator (" ..math.floor((workspace.CurrentCamera.CFrame - parent.PrimaryPart.CFrame).magnitude).. "m away)"
+		text.Text = "Generator (" ..math.floor((workspace.Camera.CFrame - parent.Glow.CFrame).magnitude). "m away)"
 	
 		if parent:FindFirstChild("On") then
 	
